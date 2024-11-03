@@ -1,4 +1,3 @@
-
 import os
 import re
 import subprocess 
@@ -9,10 +8,7 @@ import regex
 from ast import literal_eval
 import json
 from unidecode import unidecode
-# import nltk
-# nltk.download('punkt')
-# from nltk.tokenize import sent_tokenize
-# nltk.download('punkt_tab')
+
 
 clause_title_pattern = re.compile(r"""
     ^\s*                             
@@ -247,7 +243,7 @@ def process_pdf_and_fuzzy_matching(file_path, csv_file_path):
         with open(no_match_file, 'a') as f:
             f.write(f"{filename}\n") 
 
-# Example usage
+
 folder_path = './static/'
 csv_file_path = './csv/master_clauses.csv'
 no_match_file = './result/not_found/no_match_files.txt' 
